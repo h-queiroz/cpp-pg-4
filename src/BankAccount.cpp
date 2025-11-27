@@ -7,7 +7,10 @@ BankAccount::BankAccount(std::string ownerName, double initialBalance) {
     m_balance = initialBalance;
 }
 
-void BankAccount::deposit(double amount) { m_balance += amount; }
+void BankAccount::deposit(double amount) {
+    if(amount > 0)
+        m_balance += amount;
+}
 
 void BankAccount::withdraw(double amount) {
     if(m_balance >= amount)
