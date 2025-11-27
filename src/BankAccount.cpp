@@ -2,10 +2,7 @@
 
 #include <iostream>
 
-BankAccount::BankAccount(std::string ownerName, double initialBalance) {
-    m_ownerName = ownerName;
-    m_balance = initialBalance;
-}
+BankAccount::BankAccount(std::string ownerName, double initialBalance) : m_ownerName(ownerName), m_balance(initialBalance) { }
 
 void BankAccount::deposit(double amount) {
     if(amount > 0)
